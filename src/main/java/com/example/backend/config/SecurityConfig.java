@@ -2,10 +2,16 @@ package com.example.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.ProviderManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import java.util.List;
 
 @Configuration
 public class SecurityConfig {
@@ -15,10 +21,11 @@ public class SecurityConfig {
         http
             .csrf().disable()
             .authorizeHttpRequests()
-            .requestMatchers("/users").permitAll() // Permettre la création d'un user sans authentification
-            .requestMatchers("/users/**").authenticated() // Sécuriser toutes les autres routes
+            .requestMatchers("/users").permitAll()  // Permettre l'inscription
+            .requestMatchers("/auth/login").permitAll()  // Permettre le login
+            .requestMatchers("/users/**").authenticated()  // Protéger les autres routes
             .and()
-            .httpBasic(); // Permettre une authentification basique
+            .httpBasic().disable();  // Désactiver l'authentification basique
 
         return http.build();
     }
@@ -26,5 +33,17 @@ public class SecurityConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return email -> {
+            throw new RuntimeException("Spring Security par défaut désactivé !");
+        };
     }
 }

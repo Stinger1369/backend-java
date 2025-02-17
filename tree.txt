@@ -1,14 +1,173 @@
 ./
+├── .git/
+│   ├── branches/
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── hooks/
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info/
+│   │   └── exclude
+│   ├── logs/
+│   │   ├── HEAD
+│   │   └── refs/
+│   │       ├── heads/
+│   │       │   ├── dev
+│   │       │   └── main
+│   │       └── remotes/
+│   │           └── origin/
+│   │               ├── dev
+│   │               ├── HEAD
+│   │               └── main
+│   ├── objects/
+│   │   ├── 00/
+│   │   │   └── 7ef14563e991f022b8d7f1553cd6e14168c49b
+│   │   ├── 0e/
+│   │   │   └── a764a6f5c36220425135af611af062ace37fc8
+│   │   ├── 11/
+│   │   │   └── f470cee37fd8faf9072facf8a1ff97cfbeb076
+│   │   ├── 16/
+│   │   │   └── 1bddc0490036dacb4bb8296a24f490c255f5f4
+│   │   ├── 19/
+│   │   │   └── 529ddf8c6eaa08c5c75ff80652d21ce4b72f8c
+│   │   ├── 24/
+│   │   │   └── 9bdf3822221aa612d1da2605316cabd7b07e50
+│   │   ├── 27/
+│   │   │   └── bc77fcf40237164fbb860f53b0ac9fff15cbec
+│   │   ├── 2e/
+│   │   │   └── 12dd407f21278d61f9368e5bfd3548dd0e4450
+│   │   ├── 34/
+│   │   │   ├── 0c008e76f11404e578fb6fe70a8a5fd800d6a4
+│   │   │   └── 16f8c983fe0d55f4fa338872d0c79f758e6497
+│   │   ├── 3b/
+│   │   │   └── 41682ac579fafb665abb4dfcdaa6aaaa712184
+│   │   ├── 3c/
+│   │   │   └── a17a4e34ab41d27fb34edd8dbd734b1454d386
+│   │   ├── 41/
+│   │   │   └── ee37ada749dbe07424d7b9a38aa88cca3ed7c4
+│   │   ├── 42/
+│   │   │   └── ab687754e252f9a4ca4fb3dfddda4e736ad48f
+│   │   ├── 45/
+│   │   │   ├── 0efbc35d368517ca4827257538303c9df7a593
+│   │   │   └── ec8dd3a70e94227a8dc6234571f529df08035f
+│   │   ├── 51/
+│   │   │   └── 141f9f620cba429a7955898636ec51c982abf3
+│   │   ├── 54/
+│   │   │   └── 9e00a2a96fa9d7c5dbc9859664a78d980158c2
+│   │   ├── 64/
+│   │   │   ├── 08494b6a03bad56543388039fd7dedca23cd0d
+│   │   │   └── e84cc3875ccdbbac94290a93cbcf5322348335
+│   │   ├── 6e/
+│   │   │   └── e2a84bd55453cb1c334753c6fed22dac6b8ddc
+│   │   ├── 74/
+│   │   │   └── e386ad316b60613de462a675d137ee7c77a3d6
+│   │   ├── 75/
+│   │   │   └── 1d9781eeaa0f3c5d9ffbc902ef9c1ae06ec8cb
+│   │   ├── 7b/
+│   │   │   └── 016a89fbafd4b802a61d3207cf76f7c2253c6e
+│   │   ├── 7c/
+│   │   │   └── 3324eaa30deb7bd679480751de29c812889ec6
+│   │   ├── 86/
+│   │   │   └── 741ffc208cacb99e906d7d75bc0ecd97731a5b
+│   │   ├── 8c/
+│   │   │   └── cf8376b39860638658c825333c20242efbd8e7
+│   │   ├── 92/
+│   │   │   └── 383c2e069facc2d9781377d63bac6793f43261
+│   │   ├── 97/
+│   │   │   └── 34a5c06e83099a1b69b6ece5e904719eeca735
+│   │   ├── aa/
+│   │   │   └── 62c4dca308d4facf62e8b35c767306823c0ade
+│   │   ├── ac/
+│   │   │   └── c1658f919153d017fef63f44bfe2a295b8041c
+│   │   ├── b2/
+│   │   │   ├── 96f1c8bcf6fb832e2c5568fe7fc7d635555341
+│   │   │   └── b53b94f60e54e025eda8e55b85260702fe3a35
+│   │   ├── b4/
+│   │   │   └── 13d8ddd7d95247d3a3228e06e9d2f680cc54ce
+│   │   ├── b7/
+│   │   │   └── c6f4654e2c1b5acea0541941d599532b7ca43e
+│   │   ├── b8/
+│   │   │   └── 02280f7556bee36126c1804ca7c2cd12df7c3e
+│   │   ├── c5/
+│   │   │   └── 4b47a6176dd3c656dc387c6a9e06975ff457d9
+│   │   ├── cf/
+│   │   │   └── be036ca72a60b656b7200cb294914371c65dd8
+│   │   ├── d5/
+│   │   │   └── 8dfb70bab565a697e6854eb012d17e0fd39bd4
+│   │   ├── d9/
+│   │   │   └── 955c88221d5d8554a2bdc71537e2633da5b502
+│   │   ├── da/
+│   │   │   └── 2b0621a0223c25ac29374e5d2bd8bd69b92eb9
+│   │   ├── de/
+│   │   │   └── 3e0ef2ef3cf2690741700a0f8a9098f687bd0a
+│   │   ├── df/
+│   │   │   └── 1bef4700c27f6c333cb3c0de5446be7c6f6fe4
+│   │   ├── e0/
+│   │   │   └── 7d2f31d5cf746837ac7676142dd6fbbfbd64fa
+│   │   ├── e3/
+│   │   │   └── 67cfce0fa6e7744b2591f9a93dcaf8d04d5ed3
+│   │   ├── e6/
+│   │   │   ├── 511ba506897bad17a49fc8b47f29818aca508a
+│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   ├── eb/
+│   │   │   └── 2e7fb04f0d1ef1360783a24b1b93970c203706
+│   │   ├── ec/
+│   │   │   └── caed2d0b6f5e1d6c7105d5fb2e320a3316948c
+│   │   ├── ee/
+│   │   │   └── 4af5e905439d04dafb6816ca424e404b73b40c
+│   │   ├── f1/
+│   │   │   └── 019f9f9436db3c41631ee80bc4833a68a96aaf
+│   │   ├── fb/
+│   │   │   └── bc5f53924bda72cc73916c72c469978e589144
+│   │   ├── fe/
+│   │   │   └── 863f0e04a5bc437688664d5f71f81ac0684d90
+│   │   ├── info/
+│   │   └── pack/
+│   │       ├── pack-f2cfd4013cc1c162b28b9dd4d4d4d7a759ab68ff.idx
+│   │       ├── pack-f2cfd4013cc1c162b28b9dd4d4d4d7a759ab68ff.pack
+│   │       └── pack-f2cfd4013cc1c162b28b9dd4d4d4d7a759ab68ff.rev
+│   ├── ORIG_HEAD
+│   ├── packed-refs
+│   └── refs/
+│       ├── heads/
+│       │   ├── dev
+│       │   └── main
+│       ├── remotes/
+│       │   └── origin/
+│       │       ├── dev
+│       │       ├── HEAD
+│       │       └── main
+│       └── tags/
 ├── .gitattributes
 ├── .gitignore
 ├── .mvn/
 │   └── wrapper/
 │       └── maven-wrapper.properties
+├── .vscode/
+│   └── settings.json
 ├── HELP.md
+├── LICENSE
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
 ├── readm.md
+├── README.md
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -20,7 +179,9 @@
 │   │   │               ├── BackendApplication.java
 │   │   │               ├── config/
 │   │   │               ├── models/
+│   │   │               │   └── User.java
 │   │   │               ├── repositories/
+│   │   │               │   └── UserRepository.java
 │   │   │               └── services/
 │   │   └── resources/
 │   │       └── application.properties
@@ -30,4 +191,43 @@
 │               └── example/
 │                   └── backend/
 │                       └── BackendApplicationTests.java
-└── tree.js
+├── target/
+│   ├── backend-0.0.1-SNAPSHOT.jar
+│   ├── backend-0.0.1-SNAPSHOT.jar.original
+│   ├── classes/
+│   │   ├── application.properties
+│   │   └── com/
+│   │       └── example/
+│   │           └── backend/
+│   │               ├── BackendApplication.class
+│   │               ├── models/
+│   │               │   └── User.class
+│   │               └── repositories/
+│   │                   └── UserRepository.class
+│   ├── generated-sources/
+│   │   └── annotations/
+│   ├── generated-test-sources/
+│   │   └── test-annotations/
+│   ├── maven-archiver/
+│   │   └── pom.properties
+│   ├── maven-status/
+│   │   └── maven-compiler-plugin/
+│   │       ├── compile/
+│   │       │   └── default-compile/
+│   │       │       ├── createdFiles.lst
+│   │       │       └── inputFiles.lst
+│   │       └── testCompile/
+│   │           └── default-testCompile/
+│   │               ├── createdFiles.lst
+│   │               └── inputFiles.lst
+│   ├── surefire-reports/
+│   │   ├── 2025-02-17T15-36-35_914.dumpstream
+│   │   ├── com.example.backend.BackendApplicationTests.txt
+│   │   └── TEST-com.example.backend.BackendApplicationTests.xml
+│   └── test-classes/
+│       └── com/
+│           └── example/
+│               └── backend/
+│                   └── BackendApplicationTests.class
+├── tree.js
+└── tree.txt
